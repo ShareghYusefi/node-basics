@@ -10,8 +10,32 @@
 // What are modules in Node?
 // Modules are like libraries in node. They are reusable block of code. There built in modules provided by node and third party modules available on the web.
 
+// Any file in node is considered a module, giving us the ability to import and export code between files.
+// var module = require("node:module");
+// console.log(module);
+
+// var, let, const are used to define variables of node modules.
+
+// What are some built in modules in Node?
+// 1. http to create a web server
+// 2. fs: to work with files in the server file system (read, write, update, and delete files)
+// 3. path: to wor with file paths.
+const path = require("node:path");
+// __filename is a global object in node which gives the absolute path of the current file.
+var x = path.parse(__filename);
+console.log(x);
+// 4. OS: to get information about the operating system
+const os = require("node:os");
+var type = os.type();
+console.log(type);
+var freeMemory = os.freemem(); // return the amount of free memory in bytes.
+var totalMemory = os.totalmem();
+console.log(freeMemory);
+console.log(totalMemory);
+
 // we can use the 'require' keyword to import modules
 var http = require("http");
+const Module = require("module");
 
 // () => {} is an arrow function in javascript which is used to replace traditional anonymous functions: function(){}
 // createServer function takes a callback function as an argument
