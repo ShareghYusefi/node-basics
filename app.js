@@ -33,6 +33,11 @@ var totalMemory = os.totalmem();
 console.log(freeMemory);
 console.log(totalMemory);
 
+// Install external modules in node
+// npm install <module-name> or npm i <module-name>
+const ospath = require("ospath");
+console.log(ospath.home());
+
 // we can use the 'require' keyword to import modules
 var http = require("http");
 const Module = require("module");
