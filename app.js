@@ -17,11 +17,11 @@ var http = require("http");
 // createServer function takes a callback function as an argument
 // The callback function takes two arguments, the request(req) & response(res) objects.
 const server = http.createServer((req, res) => {
-  // write a response to the client(browser)
+  // write a response to the client(browser) using the .end function
   console.log("Request came in!");
 
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.write("Hello World!\n");
+  res.writeHead(200, { "Content-Type": "application/json" });
+  res.end('{"message": "Hello world"}');
 });
 
 // starts a simple http server locally on port 3000
