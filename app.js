@@ -14,6 +14,12 @@
 // var module = require("node:module");
 // console.log(module);
 
+// import logger module
+const loggerFunction = require("./logger");
+// ./ : current directory
+// ../ : parent directory
+// / : root directory of filesystem
+
 // var, let, const are used to define variables of node modules.
 
 // What are some built in modules in Node?
@@ -33,21 +39,23 @@ var totalMemory = os.totalmem();
 console.log(freeMemory);
 console.log(totalMemory);
 
-// Install external modules in node
+// npm init will setup package.json file.
+// Json data is a collection of key-value pairs in string format.
+// npm install will create node_module folder and install relevant modules.
+// Install external modules in node.
 // npm install <module-name> or npm i <module-name>
 const ospath = require("ospath");
 console.log(ospath.home());
 
 // we can use the 'require' keyword to import modules
 var http = require("http");
-const Module = require("module");
 
 // () => {} is an arrow function in javascript which is used to replace traditional anonymous functions: function(){}
 // createServer function takes a callback function as an argument
 // The callback function takes two arguments, the request(req) & response(res) objects.
 const server = http.createServer((req, res) => {
   // write a response to the client(browser) using the .end function
-  console.log("Request came in!");
+  loggerFunction("Request came in!");
 
   res.writeHead(200, { "Content-Type": "application/json" });
   res.end('{"message": "Hello world"}');

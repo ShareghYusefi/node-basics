@@ -1,4 +1,26 @@
 {
+  "name": "node_basics",
+  "version": "1.0.0",
+  "description": "description here.",
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "homepage": "https://github.com/ShareghYusefi/node-basics#readme",
+  "bugs": {
+    "url": "https://github.com/ShareghYusefi/node-basics/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShareghYusefi/node-basics.git"
+  },
+  "license": "ISC",
+  "author": "Sharegh Yusefi",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "ospath": "^1.2.2"
   }
