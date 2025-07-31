@@ -61,6 +61,16 @@ const server = http.createServer((req, res) => {
   res.end('{"message": "Hello world"}');
 });
 
+// events in node js
+const EventEmitter = require("node:events");
+
+const myEmitter = new EventEmitter();
+myEmitter.on("fire", () => {
+  console.log("an event occurred!");
+});
+// emit 'fire' event
+myEmitter.emit("fire");
+
 // starts a simple http server locally on port 3000
 server.listen(3000, "127.0.0.1", () => {
   console.log("Listening on 127.0.0.1:3000");
